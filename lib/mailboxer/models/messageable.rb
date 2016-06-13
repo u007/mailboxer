@@ -235,7 +235,7 @@ module Mailboxer
           with :receiver_id, self.id
         end
 
-        @search.results.map { |r| r.conversation }.uniq
+        @search.results.map { |r| r.conversation }.distinct
       end
     end
   end
